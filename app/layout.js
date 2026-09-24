@@ -6,7 +6,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0 }}>
+      <body
+        style={{
+          margin: 0,
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif',
+          background: "#ffffff",
+          color: "#111827",
+        }}
+      >
         {children}
       </body>
     </html>
