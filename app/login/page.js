@@ -12,8 +12,6 @@ export default function Login() {
         minHeight: "100vh",
         background: "#f8fafc",
         color: "#111827",
-        fontFamily:
-          '-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif',
       }}
     >
       <nav
@@ -129,41 +127,7 @@ export default function Login() {
 
             <div
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "14px",
-                margin: "28px 0",
-              }}
-            >
-              <div
-                style={{
-                  height: "1px",
-                  background: "#e5e7eb",
-                  flex: 1,
-                }}
-              />
-
-              <span
-                style={{
-                  color: "#9ca3af",
-                  fontSize: "12px",
-                  fontWeight: "700",
-                }}
-              >
-                SUBSAVE
-              </span>
-
-              <div
-                style={{
-                  height: "1px",
-                  background: "#e5e7eb",
-                  flex: 1,
-                }}
-              />
-            </div>
-
-            <div
-              style={{
+                marginTop: "26px",
                 background: "#f8fafc",
                 border: "1px solid #e5e7eb",
                 borderRadius: "12px",
@@ -177,7 +141,7 @@ export default function Login() {
                   marginBottom: "6px",
                 }}
               >
-                One-click secure login
+                Secure Google login
               </div>
 
               <div
@@ -187,8 +151,8 @@ export default function Login() {
                   lineHeight: "1.6",
                 }}
               >
-                Use your Google account to securely access your SubSave
-                dashboard.
+                Use the Google account connected to your SubSave profile to
+                access your dashboard.
               </div>
             </div>
 
@@ -200,7 +164,7 @@ export default function Login() {
                 margin: "26px 0 0",
               }}
             >
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link
                 href="/signup"
                 style={{
