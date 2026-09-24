@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main
@@ -5,11 +7,8 @@ export default function Home() {
         minHeight: "100vh",
         background: "#ffffff",
         color: "#111827",
-        fontFamily:
-          '-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif',
       }}
     >
-      {/* NAVIGATION */}
       <nav
         style={{
           maxWidth: "1180px",
@@ -20,15 +19,18 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <div
+        <Link
+          href="/home"
           style={{
             fontSize: "27px",
             fontWeight: "800",
             letterSpacing: "-1.2px",
+            color: "#111827",
+            textDecoration: "none",
           }}
         >
           Sub<span style={{ color: "#2563eb" }}>Save</span>
-        </div>
+        </Link>
 
         <div
           style={{
@@ -39,27 +41,52 @@ export default function Home() {
             fontWeight: "600",
           }}
         >
-          <span>How It Works</span>
-          <span>Pricing</span>
-          <span>Log In</span>
+          <Link
+            href="/how-it-works"
+            style={{
+              color: "#111827",
+              textDecoration: "none",
+            }}
+          >
+            How It Works
+          </Link>
 
-          <button
+          <Link
+            href="/pricing"
+            style={{
+              color: "#111827",
+              textDecoration: "none",
+            }}
+          >
+            Pricing
+          </Link>
+
+          <Link
+            href="/login"
+            style={{
+              color: "#111827",
+              textDecoration: "none",
+            }}
+          >
+            Log In
+          </Link>
+
+          <Link
+            href="/signup"
             style={{
               background: "#2563eb",
               color: "#ffffff",
-              border: "none",
               padding: "12px 20px",
               borderRadius: "10px",
               fontWeight: "700",
-              cursor: "pointer",
+              textDecoration: "none",
             }}
           >
             Get Started
-          </button>
+          </Link>
         </div>
       </nav>
 
-      {/* HERO */}
       <section
         style={{
           maxWidth: "1100px",
@@ -111,22 +138,23 @@ export default function Home() {
           and see exactly where your money goes every month.
         </p>
 
-        <button
+        <Link
+          href="/signup"
           style={{
+            display: "inline-block",
             marginTop: "10px",
             background: "#2563eb",
             color: "#ffffff",
-            border: "none",
             padding: "17px 30px",
             borderRadius: "12px",
             fontSize: "17px",
             fontWeight: "700",
-            cursor: "pointer",
+            textDecoration: "none",
             boxShadow: "0 10px 30px rgba(37,99,235,0.20)",
           }}
         >
           Start Tracking — Free
-        </button>
+        </Link>
 
         <div
           style={{
@@ -138,7 +166,6 @@ export default function Home() {
           No credit card required
         </div>
 
-        {/* DASHBOARD PREVIEW */}
         <div
           style={{
             maxWidth: "900px",
@@ -192,21 +219,21 @@ export default function Home() {
               </div>
             </div>
 
-            <button
+            <Link
+              href="/login"
               style={{
                 background: "#111827",
                 color: "#ffffff",
-                border: "none",
                 borderRadius: "10px",
                 padding: "12px 18px",
                 fontWeight: "700",
+                textDecoration: "none",
               }}
             >
               Add Subscription
-            </button>
+            </Link>
           </div>
 
-          {/* PRICE ALERT */}
           <div
             style={{
               background: "#fff7f7",
@@ -249,7 +276,6 @@ export default function Home() {
             </strong>
           </div>
 
-          {/* SUBSCRIPTION */}
           <div
             style={{
               background: "#ffffff",
@@ -279,7 +305,6 @@ export default function Home() {
             <strong>$11.99 / month</strong>
           </div>
 
-          {/* SUBSCRIPTION */}
           <div
             style={{
               background: "#ffffff",
