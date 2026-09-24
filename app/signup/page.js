@@ -12,11 +12,8 @@ export default function Signup() {
         minHeight: "100vh",
         background: "#f8fafc",
         color: "#111827",
-        fontFamily:
-          '-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif',
       }}
     >
-      {/* TOP */}
       <nav
         style={{
           maxWidth: "1180px",
@@ -38,12 +35,11 @@ export default function Signup() {
         </Link>
       </nav>
 
-      {/* SIGNUP AREA */}
       <section
         style={{
           display: "flex",
           justifyContent: "center",
-          padding: "55px 24px 100px",
+          padding: "75px 24px 100px",
         }}
       >
         <div
@@ -89,12 +85,12 @@ export default function Signup() {
               boxShadow: "0 18px 50px rgba(0,0,0,0.06)",
             }}
           >
-            {/* GOOGLE BUTTON */}
-            <button
-              type="button"
+            <Link
+              href="/auth/google"
               style={{
                 width: "100%",
                 height: "52px",
+                boxSizing: "border-box",
                 background: "#ffffff",
                 color: "#111827",
                 border: "1px solid #d1d5db",
@@ -106,6 +102,7 @@ export default function Signup() {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "12px",
+                textDecoration: "none",
               }}
             >
               <span
@@ -126,137 +123,46 @@ export default function Signup() {
               </span>
 
               Continue with Google
-            </button>
+            </Link>
 
-            {/* DIVIDER */}
             <div
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "14px",
-                margin: "26px 0",
+                marginTop: "26px",
+                background: "#f8fafc",
+                border: "1px solid #e5e7eb",
+                borderRadius: "12px",
+                padding: "18px",
+                textAlign: "center",
               }}
             >
               <div
                 style={{
-                  height: "1px",
-                  background: "#e5e7eb",
-                  flex: 1,
-                }}
-              />
-
-              <span
-                style={{
-                  color: "#9ca3af",
-                  fontSize: "12px",
                   fontWeight: "700",
+                  marginBottom: "6px",
                 }}
               >
-                YOUR PROFILE
-              </span>
+                Quick setup
+              </div>
 
               <div
                 style={{
-                  height: "1px",
-                  background: "#e5e7eb",
-                  flex: 1,
-                }}
-              />
-            </div>
-
-            {/* FIRST NAME */}
-            <label
-              style={{
-                display: "block",
-                fontSize: "14px",
-                fontWeight: "700",
-                marginBottom: "8px",
-              }}
-            >
-              First name
-            </label>
-
-            <input
-              type="text"
-              placeholder="Your first name"
-              style={{
-                boxSizing: "border-box",
-                width: "100%",
-                height: "50px",
-                border: "1px solid #d1d5db",
-                borderRadius: "10px",
-                padding: "0 14px",
-                fontSize: "15px",
-                outline: "none",
-                background: "#ffffff",
-                color: "#111827",
-                marginBottom: "20px",
-              }}
-            />
-
-            {/* LAST NAME */}
-            <label
-              style={{
-                display: "block",
-                fontSize: "14px",
-                fontWeight: "700",
-                marginBottom: "8px",
-              }}
-            >
-              Last name{" "}
-              <span
-                style={{
-                  color: "#9ca3af",
-                  fontWeight: "500",
+                  color: "#6b7280",
+                  fontSize: "13px",
+                  lineHeight: "1.6",
                 }}
               >
-                (optional)
-              </span>
-            </label>
-
-            <input
-              type="text"
-              placeholder="Your last name"
-              style={{
-                boxSizing: "border-box",
-                width: "100%",
-                height: "50px",
-                border: "1px solid #d1d5db",
-                borderRadius: "10px",
-                padding: "0 14px",
-                fontSize: "15px",
-                outline: "none",
-                background: "#ffffff",
-                color: "#111827",
-                marginBottom: "24px",
-              }}
-            />
-
-            {/* CONTINUE */}
-            <button
-              type="button"
-              style={{
-                width: "100%",
-                height: "52px",
-                border: "none",
-                borderRadius: "11px",
-                background: "#2563eb",
-                color: "#ffffff",
-                fontSize: "15px",
-                fontWeight: "700",
-                cursor: "pointer",
-                boxShadow: "0 8px 24px rgba(37,99,235,0.18)",
-              }}
-            >
-              Create Account
-            </button>
+                We’ll use the name and email from your Google account to set
+                up your SubSave profile. You’ll be able to edit your name
+                later.
+              </div>
+            </div>
 
             <p
               style={{
                 textAlign: "center",
                 color: "#6b7280",
                 fontSize: "14px",
-                margin: "25px 0 0",
+                margin: "26px 0 0",
               }}
             >
               Already have an account?{" "}
@@ -282,8 +188,8 @@ export default function Signup() {
               marginTop: "22px",
             }}
           >
-            By creating an account, you agree to SubSave's Terms of Service
-            and Privacy Policy.
+            By creating an account, you agree to SubSave&apos;s Terms of
+            Service and Privacy Policy.
           </p>
         </div>
       </section>
