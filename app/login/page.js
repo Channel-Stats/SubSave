@@ -16,7 +16,6 @@ export default function Login() {
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif',
       }}
     >
-      {/* TOP */}
       <nav
         style={{
           maxWidth: "1180px",
@@ -38,7 +37,6 @@ export default function Login() {
         </Link>
       </nav>
 
-      {/* LOGIN AREA */}
       <section
         style={{
           display: "flex",
@@ -89,12 +87,12 @@ export default function Login() {
               boxShadow: "0 18px 50px rgba(0,0,0,0.06)",
             }}
           >
-            {/* GOOGLE LOGIN */}
-            <button
-              type="button"
+            <Link
+              href="/auth/google"
               style={{
                 width: "100%",
                 height: "52px",
+                boxSizing: "border-box",
                 background: "#ffffff",
                 color: "#111827",
                 border: "1px solid #d1d5db",
@@ -106,6 +104,7 @@ export default function Login() {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "12px",
+                textDecoration: "none",
               }}
             >
               <span
@@ -126,7 +125,7 @@ export default function Login() {
               </span>
 
               Continue with Google
-            </button>
+            </Link>
 
             <div
               style={{
