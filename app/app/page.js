@@ -17,12 +17,22 @@ export default async function Dashboard() {
     redirect("/login");
   }
 
+  async function logout() {
+    "use server";
+
+    const supabase = await createClient();
+    await supabase.auth.signOut();
+
+    redirect("/login");
+  }
+
   const fullName =
     user.user_metadata?.full_name ||
     user.user_metadata?.name ||
     "";
 
   const firstName =
+    user.user_metadata?.given_name ||
     fullName.split(" ")[0] ||
     user.email?.split("@")[0] ||
     "there";
@@ -67,11 +77,37 @@ export default async function Dashboard() {
 
           <div
             style={{
-              fontSize: "14px",
-              color: "#6b7280",
+              display: "flex",
+              alignItems: "center",
+              gap: "18px",
             }}
           >
-            {user.email}
+            <div
+              style={{
+                fontSize: "14px",
+                color: "#6b7280",
+              }}
+            >
+              {user.email}
+            </div>
+
+            <form action={logout}>
+              <button
+                type="submit"
+                style={{
+                  background: "#ffffff",
+                  color: "#111827",
+                  border: "1px solid #d1d5db",
+                  borderRadius: "9px",
+                  padding: "9px 14px",
+                  fontWeight: "700",
+                  fontSize: "13px",
+                  cursor: "pointer",
+                }}
+              >
+                Log Out
+              </button>
+            </form>
           </div>
         </div>
       </nav>
